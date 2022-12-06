@@ -1,37 +1,6 @@
 # Praktikum6_
 
-dataMahasiswa = {}
 
-print("=" * 65)
-print("|\tPROGRAM INPUT NILAI MAHASISWA MENGGUNAKAN FUNGSI\t|")
-print("=" * 65)
-
-def tambah():
-        nama = str(input("Masukan Nama : "))
-        nim = int(input("Masukan Nim   : "))
-        tugas = int(input("Masukan Nilai Tugas : "))
-        uts = int(input("Masukan Nilai UTS     : "))
-        uas = int(input("Masukan Nilai UAS     : "))
-        akhir = (tugas / 3) + (uts / 3.5) + (uas / 3.5)
-        dataMahasiswa[nama] = nim, tugas, uts, uas, akhir,
-        print("\nDATA BERHASIL DI TAMBAHKAN!")
-def tampilkan():
-        print("=" * 69)
-        print("|" + "\t" * 3 + "DAFTAR NILAI MAHASISWA" + "\t" * 3 +
-                  "    |")
-        print("=" * 69)
-        print("| NO |   \tNAMA\t   |\tNIM \t| TUGAS | UTS | UAS | AKHIR |")
-        print("=" * 69)
-        for tampil in dataMahasiswa.items():
-            no = 0
-            no += 1
-            print("| {6:2} |\t {0:15}   | {1:9} \t| {2:5} | {3:3} | {4:3} | {5:5} |".format(tampil[0], tampil[1][0], tampil[1][1], tampil[1][2], tampil[1][3],"%.2f" % float(tampil[1][4]), no))
-            print("=" * 69)
-def hapus(nama):
-            del dataMahasiswa[nama]
-            print("DATA BERHASIL DI HAPUS!")
- 
-def ubah(nama):
         if nama in dataMahasiswa.keys():
             nim = int(input("Masukan Nim  : "))
             tugas = int(input("Masukan Nilai Tugas : "))
